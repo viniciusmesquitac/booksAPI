@@ -54,20 +54,20 @@ const booksRoutes = (app, fs) => {
     });
 
     // UPDATE
-app.put('/users/:id', (req, res) => {
+    app.put('/users/:id', (req, res) => {
 
-    readFile(data => {
+        readFile(data => {
 
-        // add the new user
-        const userId = req.params["id"];
-        data[userId] = JSON.parse(req.body.data);
+            // add the new user
+            const userId = req.params["id"];
+            data[userId] = JSON.parse(req.body.data);
 
-        writeFile(JSON.stringify(data, null, 2), () => {
-            res.status(200).send(`users id:${userId} updated`);
-        });
-    },
-        true);
-});
+            writeFile(JSON.stringify(data, null, 2), () => {
+                res.status(200).send(`users id:${userId} updated`);
+            });
+        },
+            true);
+    });
 
 
 // DELETE
