@@ -1,7 +1,7 @@
 const booksRoutes = (app, fs) => {
 
     // variables
-    const dataPath = './data/books.json';
+    const dataPath = './data/adventure.json';
 
 
     // refactored helper methods
@@ -27,7 +27,7 @@ const booksRoutes = (app, fs) => {
     };
 
     // READ
-    app.get('/books', (req, res) => {
+    app.get('/booksAPI/adventure', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
@@ -38,7 +38,7 @@ const booksRoutes = (app, fs) => {
     });
 
     // CREATE
-    app.post('/books', (req, res) => {
+    app.post('/booksAPI/adventure', (req, res) => {
 
         readFile(data => {
             const newUserId = Object.keys(data).length + 1;
@@ -54,7 +54,7 @@ const booksRoutes = (app, fs) => {
     });
 
     // UPDATE
-    app.put('/books/:id', (req, res) => {
+    app.put('/booksAPI/adventure/:id', (req, res) => {
 
         readFile(data => {
 

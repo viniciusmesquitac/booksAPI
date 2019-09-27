@@ -1,8 +1,122 @@
-{
-  "1": {
-    "name": "king arthur",
-    "descrption": "teste",
-    "state": "king",
-    "isbn": 1
+[
+  {
+    "uid": 1,
+    "name": "Vinicius",
+    "email": "king",
+    "password": "teste",
+    "books": [
+      {
+        "title": "king arthur",
+        "description": "teste",
+        "author": "king",
+        "owner_id": 1,
+        "thumbnail":"",
+        "history_id":[],
+        "status": "false"
+      }
+    ],
+    "comments": [
+      {
+        "id": "",
+        "title": "",
+        "comment": ""
+      }
+    ]
+  },
+  {
+    "uid": 1,
+    "name": "Vinicius",
+    "email": "king",
+    "password": "teste",
+    "books": [
+      {
+        "title": "king arthur",
+        "description": "teste",
+        "author": "king",
+        "owner_id": 1,
+        "thumbnail":"",
+        "history_id":[],
+        "status": "false"
+      }
+    ],
+    "comments": [
+      {
+        "id": "",
+        "title": "",
+        "comment": ""
+      }
+    ]  
+  },
+  {
+    "uid": 1,
+    "name": "Vinicius",
+    "email": "king",
+    "password": "teste",
+    "books": [
+      {
+        "title": "king arthur",
+        "description": "teste",
+        "author": "king",
+        "owner_id": 1,
+        "thumbnail":"",
+        "history_id":[],
+        "status": "false"
+      }
+    ],
+    "comments": [
+      {
+        "id": "",
+        "title": "",
+        "comment": ""
+      }
+    ]   
+  },
+  {
+    "uid": 1,
+    "name": "Yuri Moura",
+    "email": "king",
+    "password": "teste",
+    "books": [
+      {
+        "title": "king arthur",
+        "description": "teste",
+        "author": "king",
+        "owner_id": 1,
+        "thumbnail":"",
+        "history_id":[],
+        "status": "false"
+      }
+    ],
+    "comments": [
+      {
+        "id": "",
+        "title": "",
+        "comment": ""
+      }
+    ]
+  },
+  {
+    "uid": 1,
+    "name": "Carlos Alberto",
+    "email": "king",
+    "password": "teste",
+    "books": [
+      {
+        "title": "king arthur",
+        "description": "teste",
+        "author": "king",
+        "owner_id": 1,
+        "thumbnail":"",
+        "history_id":[],
+        "status": "false"
+      }
+    ],
+    "comments": [
+      {
+        "id": "",
+        "title": "",
+        "comment": ""
+      }
+    ] 
   }
-}
+]

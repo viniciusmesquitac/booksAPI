@@ -1,6 +1,10 @@
 // load up our shiny new route for users
 const booksRoutes = require('./books');
 
+const usersRoutes = require('./users');
+
+const booksAPI = require('./booksAPI');
+
 const appRouter = (app, fs) => {
 
     // we've added in a default route here that handles empty routes
@@ -12,6 +16,8 @@ const appRouter = (app, fs) => {
 
     // run our user route module here to complete the wire up
     booksRoutes(app, fs);
+    usersRoutes(app, fs);
+    booksAPI(app, fs);
 };
 
 // this line is unchanged

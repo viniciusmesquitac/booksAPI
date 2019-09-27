@@ -1,7 +1,7 @@
-const booksRoutes = (app, fs) => {
+const usersRoutes = (app, fs) => {
 
     // variables
-    const dataPath = './data/books.json';
+    const dataPath = './data/users.json';
 
 
     // refactored helper methods
@@ -27,7 +27,7 @@ const booksRoutes = (app, fs) => {
     };
 
     // READ
-    app.get('/books', (req, res) => {
+    app.get('/users', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
@@ -36,9 +36,24 @@ const booksRoutes = (app, fs) => {
             res.send(JSON.parse(data));
         });
     });
+    // route to user 
+    app.get('/users/:name', (req, res) => {
+
+        readFile(data => {
+
+            // add the new user
+            const userId = req.params["uid"];
+            data[userId] = JSON.parse(req.body.data);
+
+            readFile(JSON.stringify(data, null, 2), () => {
+                res.status(200).send(`users id:${userId}`);
+            });
+        },
+            true);
+    });
 
     // CREATE
-    app.post('/books', (req, res) => {
+    app.post('/users', (req, res) => {
 
         readFile(data => {
             const newUserId = Object.keys(data).length + 1;
@@ -54,12 +69,12 @@ const booksRoutes = (app, fs) => {
     });
 
     // UPDATE
-    app.put('/books/:id', (req, res) => {
+    app.put('/users/:uid', (req, res) => {
 
         readFile(data => {
 
             // add the new user
-            const userId = req.params["id"];
+            const userId = req.params["uid"];
             data[userId] = JSON.parse(req.body.data);
 
             writeFile(JSON.stringify(data, null, 2), () => {
@@ -71,12 +86,12 @@ const booksRoutes = (app, fs) => {
 
 
 // DELETE
-app.delete('/books/:id', (req, res) => {
+app.delete('/users/:uid', (req, res) => {
 
     readFile(data => {
 
         // add the new user
-        const userId = req.params["id"];
+        const userId = req.params["uid"];
         delete data[userId];
 
         writeFile(JSON.stringify(data, null, 2), () => {
@@ -87,4 +102,4 @@ app.delete('/books/:id', (req, res) => {
 });
 };
 
-module.exports = booksRoutes;
+module.exports = usersRoutes;
