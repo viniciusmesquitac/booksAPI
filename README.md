@@ -12,7 +12,7 @@ this will run locally in port 3001 or 3000
 
 this api also is deployed in heroku
 
-https://sheltered-mountain-66758.herokuapp.com/books
+https://vinicius-mesquita.herokuapp.com/books
 
 enjoy!
 
