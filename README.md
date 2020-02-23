@@ -5,6 +5,11 @@ My first node API! Enjoy!
 ## Setup
 
 Just clone this repository and setup with command:
+download node js
+
+run "npm install" in terminal inside the folder
+
+then
 
 "npm start"
 
@@ -17,19 +22,17 @@ https://vinicius-mesquita.herokuapp.com/books
 enjoy!
 
 
-## Structure
+## Structure example
 
 ```json
 
-{
-    "title": "",
+  {
+    "title": "Viuvinha",
     "description": "",
-    "author": "",
+    "author": "José de Alencar",
     "owner_id": 1,
-    "thumbnail":"",
+    "thumbnail":"https://a.wattpad.com/cover/128016084-288-k33824.jpg",
     "history_id":[],
-    "status": ""
+    "status": "false"
   }
-
-
 ```
